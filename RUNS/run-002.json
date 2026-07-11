@@ -1,0 +1,41 @@
+{
+  "run": 2,
+  "date": "2026-07-10",
+  "phase": "explore",
+  "objective": "Complete exploration breadth and test whether recent CPSC recall records contain stable structured identifiers.",
+  "actions": [
+    "Added and scored candidates in transit accessibility and federal rulemaking",
+    "Fetched the official CPSC recall API and profiled the first 100 returned records",
+    "Revised the recall-screening mechanism and score based on measured identifier coverage",
+    "Recorded five evidence entries with incumbent alternatives and limitations"
+  ],
+  "filesChanged": [
+    "OPPORTUNITIES.md",
+    "EVIDENCE.md",
+    "AGENT_STATE.md",
+    "CHANGELOG.md",
+    "RUNS/run-002.json"
+  ],
+  "evidenceAdded": [
+    "EVIDENCE-007",
+    "EVIDENCE-008",
+    "EVIDENCE-009",
+    "EVIDENCE-010",
+    "EVIDENCE-011"
+  ],
+  "hypothesis": "Recent CPSC recall notices expose structured model or UPC identifiers often enough for direct item matching.",
+  "result": "contradicted",
+  "checks": [
+    "Parsed 9,891 records from the official CPSC JSON endpoint and calculated the stated metrics on the first 100",
+    "Confirmed five actual candidates span five materially different domains",
+    "Checked every new candidate includes an incumbent alternative and falsification argument",
+    "Validated RUNS/run-002.json as JSON"
+  ],
+  "limitations": [
+    "The CPSC profile is a recent convenience sample, not a random or population sample",
+    "No user interviews, accounts, outreach, or external transactions were performed",
+    "Transit API completeness and incumbent alert usability were not directly tested",
+    "Candidate scores remain provisional judgments rather than measured user outcomes"
+  ],
+  "next": "Shortlist at most three candidates and compare each proposed output against the official workflow on real records."
+}

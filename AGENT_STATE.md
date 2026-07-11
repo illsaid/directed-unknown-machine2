@@ -10,23 +10,23 @@ Explore.
 
 ## Run count
 
-1
+2
 
 ## Current understanding
 
-Three evidence-backed candidate problems now span consumer-product resale, health-plan data operations, and federal procurement.
+Five evidence-backed candidate problems now span five domains, completing the required exploration breadth.
 
-The secondhand recall screener has the strongest initial score because the user, recurring decision, legal consequence, authoritative input, and validation path are unusually concrete. Its key unresolved risk is identifier coverage: recall notices may not contain enough stable label data for useful automated matching.
+The secondhand recall screener remains the provisional score leader at 39/45, but its implementation premise changed. In the 100 newest records returned by the CPSC API, structured model fields were populated in 0/100 and UPC lists in 3/100, while 57/100 descriptions mentioned a model. A useful screener must therefore extract evidence from narrative text and images, return candidates rather than certainty, and preserve human review.
 
-The provider-directory auditor addresses documented pain and recurring compliance work, but public-source disagreement is not ground truth and the buyer surface is enterprise-heavy.
+Federal comment-opportunity triage scored 37/45. Its inputs and recurring decision are clear, but free subscriptions and docket alerts eliminate a generic notification product; only transparent relevance-and-action triage remains worth testing.
 
-The solicitation amendment brief has an actionable job, but SAM.gov already follows changes. It remains viable only if attachment-level change interpretation creates measurable value beyond the incumbent workflow.
+The step-free transit disruption guard has severe user consequence and an actionable output, but official status pages, ELstat alerts, and shuttle guidance make the alternative gap weak. API registration and station-topology maintenance add operating friction.
 
 No direction has been selected.
 
 ## Current objective
 
-Complete breadth requirements by investigating at least two additional candidates in materially different domains, while testing the strongest alternative-gap and data-quality assumptions in the current three.
+Shortlist the strongest candidates using adversarial real-record experiments that measure whether each proposed output improves a decision beyond the official workflow.
 
 ## Constraints
 
@@ -39,8 +39,8 @@ Complete breadth requirements by investigating at least two additional candidate
 
 ## Last action
 
-Run 1: researched three recurring problems from primary public sources; recorded six evidence entries, candidate scores, alternative gaps, and falsification tests.
+Run 2: completed exploration breadth with transit-accessibility and federal-rulemaking candidates; profiled identifier coverage in the 100 newest CPSC API records and revised the recall candidate's score and mechanism.
 
 ## Next suggested action
 
-Run 2 should add two candidates from domains not yet represented, then probe actual CPSC recall identifier coverage before shortlisting.
+Run 3 should shortlist at most three candidates and run one comparable real-record decision test for each, emphasizing incumbent-workflow comparison and falsification.

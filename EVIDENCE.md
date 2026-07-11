@@ -96,3 +96,69 @@ Record public evidence that materially affects candidate selection, implementati
 - **Confidence:** high
 - **Limitations:** The usability and completeness of built-in notifications and Data Services were not tested.
 - **Resulting decision or next test:** Continue only if attachment-level semantic change briefs outperform built-in following enough to justify an additional tool.
+
+
+### EVIDENCE-007 — Recent recall records require text extraction
+
+- **Candidate or component:** Secondhand recall screener
+- **Claim tested:** Recent recall notices expose stable, structured identifiers suitable for direct label matching.
+- **Source:** https://www.saferproducts.gov/RestWebServices/Recall?format=json
+- **Source type:** primary
+- **Retrieved:** 2026-07-10
+- **Relevant evidence:** A profile of the first 100 records returned by the API, dated 2026-05-07 through 2026-07-09, found product names, descriptions, and images in 100/100 records; structured product-model fields in 0/100; structured UPC lists in 3/100; and the word "model" in 57/100 descriptions.
+- **Supports or contradicts:** Contradicts direct structured-identifier matching but supports extraction from descriptions and image captions.
+- **Confidence:** high
+- **Limitations:** The first 100 API results are a recent convenience sample, not a random sample or a population estimate. Mentioning "model" does not guarantee a complete or visible model number.
+- **Resulting decision or next test:** Reduce input-access and buildability scores; test candidate generation from partial label text with mandatory human confirmation.
+
+### EVIDENCE-008 — An elevator outage can invalidate a rider's station path
+
+- **Candidate or component:** Step-free transit disruption guard
+- **Claim tested:** Elevator status changes create a consequential trip decision rather than a passive information need.
+- **Source:** https://www.wmata.com/ride/elevators-escalators.html
+- **Source type:** primary
+- **Retrieved:** 2026-07-10
+- **Relevant evidence:** WMATA instructs riders to check whether a unit is out, note its location, and plan accordingly; it says an outage can prevent a rider from exiting at the preferred station and may require shuttle service or a center-platform workaround.
+- **Supports or contradicts:** Supports pain, actionability, and route-specific consequence.
+- **Confidence:** high
+- **Limitations:** This establishes the operational consequence, not dissatisfaction with WMATA's existing tools.
+- **Resulting decision or next test:** Test whether path-level interpretation saves time or catches impacts that the official workflow leaves to the rider.
+
+### EVIDENCE-009 — Official transit status data exists but requires registration
+
+- **Candidate or component:** Step-free transit disruption guard
+- **Claim tested:** Current elevator status and station data are programmatically accessible.
+- **Source:** https://www.wmata.com/about/developers.html
+- **Source type:** primary
+- **Retrieved:** 2026-07-10
+- **Relevant evidence:** WMATA says its API includes station information, service alerts, and elevator/escalator status, and that developers must register for an official API key.
+- **Supports or contradicts:** Supports buildability while weakening frictionless input access.
+- **Confidence:** high
+- **Limitations:** Endpoint completeness, latency, station topology, and historical availability were not tested because no account was created.
+- **Resulting decision or next test:** Before shortlisting, verify whether unauthenticated GTFS accessibility fields plus published status are sufficient for a reproducible prototype.
+
+### EVIDENCE-010 — Federal Register offers keyless public document APIs
+
+- **Candidate or component:** Federal comment-opportunity triage
+- **Claim tested:** New notices and their metadata can be monitored without a private feed.
+- **Source:** https://www.federalregister.gov/developers/documentation/api/v1
+- **Source type:** primary
+- **Retrieved:** 2026-07-10
+- **Relevant evidence:** FederalRegister.gov documents multiple public API endpoints and states that no API key is required.
+- **Supports or contradicts:** Supports input access and low prototype operating burden.
+- **Confidence:** high
+- **Limitations:** FederalRegister.gov is an unofficial informational rendition; legally consequential results must link to the official edition.
+- **Resulting decision or next test:** Backtest deadline extraction and relevance triage while retaining official-document links.
+
+### EVIDENCE-011 — Docket data is searchable, but incumbents already alert
+
+- **Candidate or component:** Federal comment-opportunity triage
+- **Claim tested:** A small tool can inspect docket changes and has an alternative gap.
+- **Source:** https://open.gsa.gov/api/regulationsgov/ ; https://downloads.regulations.gov/NRC-2019-0062-0012/content.pdf
+- **Source type:** primary
+- **Retrieved:** 2026-07-10
+- **Relevant evidence:** Regulations.gov provides search APIs for documents, comments, and dockets, using an API key with DEMO_KEY allowed for samples. An official notice describes Regulations.gov docket alerts for changes or additions with daily, weekly, or monthly delivery.
+- **Supports or contradicts:** Supports accessible inputs but contradicts a generic monitoring product.
+- **Confidence:** high
+- **Limitations:** Alert usability and coverage were not directly tested, and the cited alert instructions are from one agency notice.
+- **Resulting decision or next test:** Continue only as relevance-and-action triage demonstrably better than existing alerts, not as another notification feed.
