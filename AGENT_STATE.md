@@ -10,15 +10,23 @@ Explore.
 
 ## Run count
 
-0
+1
 
 ## Current understanding
 
-No domain, user, problem, technology, or product direction has been selected.
+Three evidence-backed candidate problems now span consumer-product resale, health-plan data operations, and federal procurement.
+
+The secondhand recall screener has the strongest initial score because the user, recurring decision, legal consequence, authoritative input, and validation path are unusually concrete. Its key unresolved risk is identifier coverage: recall notices may not contain enough stable label data for useful automated matching.
+
+The provider-directory auditor addresses documented pain and recurring compliance work, but public-source disagreement is not ground truth and the buyer surface is enterprise-heavy.
+
+The solicitation amendment brief has an actionable job, but SAM.gov already follows changes. It remains viable only if attachment-level change interpretation creates measurable value beyond the incumbent workflow.
+
+No direction has been selected.
 
 ## Current objective
 
-Investigate real recurring problems across materially different domains. Record evidence and falsification conditions before selecting a direction.
+Complete breadth requirements by investigating at least two additional candidates in materially different domains, while testing the strongest alternative-gap and data-quality assumptions in the current three.
 
 ## Constraints
 
@@ -31,8 +39,8 @@ Investigate real recurring problems across materially different domains. Record 
 
 ## Last action
 
-Run 0: V2 repository scaffold prepared.
+Run 1: researched three recurring problems from primary public sources; recorded six evidence entries, candidate scores, alternative gaps, and falsification tests.
 
 ## Next suggested action
 
-Run 1 should conduct broad public problem discovery, add evidence-backed candidates to `OPPORTUNITIES.md`, and avoid premature selection.
+Run 2 should add two candidates from domains not yet represented, then probe actual CPSC recall identifier coverage before shortlisting.
