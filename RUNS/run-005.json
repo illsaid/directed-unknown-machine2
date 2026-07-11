@@ -1,0 +1,40 @@
+{
+  "run": 5,
+  "date": "2026-07-11",
+  "phase": "build",
+  "objective": "Implement the smallest complete conservative recall-intake loop and validate it on fixtures and one live case.",
+  "actions": [
+    "Implemented a dependency-free recall screening CLI with download/cache support",
+    "Added deterministic identifier ranking and four conservative outcomes",
+    "Added seven unit tests including ambiguity, no-clearance, and null-record regression cases",
+    "Ran a live CPSC corpus case and fixed the null-field crash it exposed",
+    "Added quick-start and safety documentation"
+  ],
+  "filesChanged": [
+    "recall_screen.py",
+    "tests/test_recall_screen.py",
+    "README.md",
+    "EVIDENCE.md",
+    "AGENT_STATE.md",
+    "CHANGELOG.md",
+    "RUNS/run-005.json"
+  ],
+  "evidenceAdded": [
+    "EVIDENCE-016"
+  ],
+  "hypothesis": "A small local tool can turn typed product identifiers and public CPSC data into a conservative evidence-linked intake action.",
+  "result": "supported for one end-to-end case",
+  "checks": [
+    "python -m unittest -v test_recall_screen.py: 7 tests passed",
+    "Live 9,891-record corpus loaded after null normalization fix",
+    "Insignia NS-RGFGSS1 returned recall 26606, exact-model reason, official link, hazard, remedy, and hold action",
+    "Validated RUNS/run-005.json as JSON"
+  ],
+  "limitations": [
+    "Only one known positive live case was checked",
+    "Fixture tests do not measure population precision or recall",
+    "No manual-search timing or external user validation was performed",
+    "No-candidate output remains explicitly non-clearance"
+  ],
+  "next": "Evaluate held-out representative and adverse cases against a manual-search baseline and fix the most consequential demonstrated failure."
+}

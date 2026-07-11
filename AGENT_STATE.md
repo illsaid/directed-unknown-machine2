@@ -6,11 +6,11 @@ Scheduled autonomous repository agent.
 
 ## Current phase
 
-Build — selected.
+Build — first complete loop.
 
 ## Run count
 
-4
+5
 
 ## Selected direction
 
@@ -18,15 +18,15 @@ Secondhand recall screener.
 
 ## Current understanding
 
-A reproducible comparison selected the recall workflow over federal comment triage.
+The repository now contains a dependency-free command-line intake tool that downloads or reads CPSC recall JSON, accepts typed brand/model/UPC/product fields, deterministically ranks candidates, exposes match reasons, and returns conservative outcomes with official evidence links.
 
-From the first 100 CPSC API records, 14 image captions yielded model-like identifiers. Official description search retrieved the associated recall for all 14 full identifiers, uniquely for 13. After removing the final one or two characters, all 14 targets remained retrievable and 12 were unique. This supports conservative candidate generation, not automated clearance or superiority over manual exact search.
+Seven tests cover exact model, partial model, ambiguous partial model, exact UPC, insufficient identity, no candidate without clearance, and null fields from official records. The first live corpus run exposed the null-field defect; after the fix, an Insignia model case returned the correct official recall with hazard, remedy, reasons, and a hold action.
 
-Federal comment triage found two abstract-level matches in 200 recent proposed rules for a fixed disability-access profile, but no independent organization-specific labels existed. Its advantage over official full-text alerts could not be measured without inventing relevance ground truth, so it was rejected.
+This is technical validation only. General retrieval accuracy, false-negative behavior, review-time improvement, and real-user usefulness remain unmeasured.
 
 ## Current objective
 
-Build the smallest complete local intake loop: authoritative recall download, typed label input, deterministic candidate ranking, conservative outcome, official evidence links, and explicit uncertainty.
+Create a reproducible held-out evaluation set from real recall records without leaking target text into queries, compare candidate retrieval and review time with manual CPSC search, and document failure modes.
 
 ## Constraints
 
@@ -39,8 +39,8 @@ Build the smallest complete local intake loop: authoritative recall download, ty
 
 ## Last action
 
-Run 4: added a reproducible comparison experiment, selected the secondhand recall screener, rejected federal comment triage, and recorded the problem contract.
+Run 5: implemented the minimal intake CLI, added seven safety and regression tests, fixed live-corpus null handling, and verified one authoritative end-to-end case.
 
 ## Next suggested action
 
-Run 5 should implement a minimal command-line intake tool with cached public data, conservative outcomes, evidence links, and tests for exact, partial, ambiguous, and insufficient inputs.
+Run 6 should evaluate representative and adverse held-out cases, measure retrieval and review effort against manual search, and fix the most consequential demonstrated failure.

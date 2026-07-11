@@ -1,5 +1,13 @@
 # Changelog
 
+## Run 5 — First complete recall-intake loop
+
+- Added a dependency-free CLI with public-data caching, typed label inputs, deterministic ranking, conservative outcomes, match reasons, and official evidence.
+- Added seven tests covering exact, partial, ambiguous, UPC, insufficient, no-candidate, and null-field cases.
+- Fixed a null-field crash discovered on the live 9,891-record corpus.
+- Verified an Insignia model end to end and added quick-start documentation.
+
+
 ## Run 4 — Reproducible comparison and selection
 
 - Added a reproducible public-API comparison script and recorded results.

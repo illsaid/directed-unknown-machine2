@@ -216,3 +216,17 @@ Record public evidence that materially affects candidate selection, implementati
 - **Confidence:** medium
 - **Limitations:** A real organization profile and labeled history could make the workflow valuable; their absence is a constraint of this experiment, not proof of no market.
 - **Resulting decision or next test:** Reject for this experiment rather than inventing relevance ground truth.
+
+
+### EVIDENCE-016 — Minimal intake loop works on the live corpus
+
+- **Candidate or component:** Secondhand recall screener
+- **Claim tested:** The selected workflow can download authoritative data and turn typed label fields into a conservative, evidence-linked action.
+- **Source:** https://www.saferproducts.gov/RestWebServices/Recall?format=json ; https://www.cpsc.gov/Recalls/2026/Best-Buy-Recalls-Insignia-Gas-Ranges-Due-to-Risk-of-Serious-Injury-from-a-Fire-Hazard
+- **Source type:** primary
+- **Retrieved:** 2026-07-11
+- **Relevant evidence:** Using brand `Insignia`, model `NS-RGFGSS1`, and product `gas range` against the downloaded live corpus returned `MATCHED RECALL — HOLD`, recall 26606, the official URL, exact-model and supporting-field reasons, hazard text, remedy text, and a human-confirmation next step.
+- **Supports or contradicts:** Supports the complete technical loop from public input to actionable output.
+- **Confidence:** high for this case
+- **Limitations:** This is one known positive case and does not measure general matching accuracy, user time, or false negatives. An initial live run exposed null fields in older records; normalization was fixed and regression-tested.
+- **Resulting decision or next test:** Build a held-out case set with positives, partial labels, ambiguous identifiers, and unrelated products; compare with manual search.
