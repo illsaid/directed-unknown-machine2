@@ -162,3 +162,30 @@ Record public evidence that materially affects candidate selection, implementati
 - **Confidence:** high
 - **Limitations:** Alert usability and coverage were not directly tested, and the cited alert instructions are from one agency notice.
 - **Resulting decision or next test:** Continue only as relevance-and-action triage demonstrably better than existing alerts, not as another notification feed.
+
+
+### EVIDENCE-012 — Only part of a recent recall sample is identity-ready
+
+- **Candidate or component:** Secondhand recall screener
+- **Claim tested:** Recent recall records contain enough product-identity evidence to support an item-level hold decision.
+- **Source:** https://www.saferproducts.gov/RestWebServices/Recall?format=json
+- **Source type:** primary
+- **Retrieved:** 2026-07-10
+- **Relevant evidence:** In the first 50 records returned by the API, dated 2026-06-11 through 2026-07-09, all 50 had product names, images, hazards, and remedies. Twenty-nine had model-related text in the description or image captions; two had structured UPCs; the union was 29/50.
+- **Supports or contradicts:** Supports a candidate-review workflow for identifiable records but contradicts universal automated screening.
+- **Confidence:** high
+- **Limitations:** This is a recent convenience sample. Model-related wording does not prove that a user's partial label would match, and no precision or recall was measured.
+- **Resulting decision or next test:** Shortlist only as a triage tool with an explicit `INSUFFICIENT IDENTITY` result; test partial-label candidate generation on held-out records.
+
+### EVIDENCE-013 — Recent proposed-rule records are often triage-ready
+
+- **Candidate or component:** Federal comment-opportunity triage
+- **Claim tested:** Public metadata is sufficient to produce a deadline-aware review queue without first parsing PDFs.
+- **Source:** https://www.federalregister.gov/api/v1/documents.json?per_page=50&order=newest&conditions%5Btype%5D%5B%5D=PRORULE
+- **Source type:** primary
+- **Retrieved:** 2026-07-10
+- **Relevant evidence:** For the 50 newest proposed-rule results, published 2026-07-01 through 2026-07-10, detailed API records contained abstracts in 49/50, comment close dates in 44/50, docket IDs in 49/50, comment URLs in 40/50, official PDFs and raw text in 50/50, and the full combination of abstract, close date, docket ID, and a comment route in 39/50.
+- **Supports or contradicts:** Supports input sufficiency for a review queue; it does not establish relevance accuracy or advantage over subscriptions.
+- **Confidence:** high
+- **Limitations:** The newest 50 proposed rules are a short convenience window. Corrections and unusual comment procedures require careful treatment, and FederalRegister.gov remains an unofficial informational rendition.
+- **Resulting decision or next test:** Shortlist for a narrow relevance backtest against a keyword/subscription baseline, preserving official-document links and explicit missing-field warnings.

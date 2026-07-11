@@ -1,5 +1,13 @@
 # Changelog
 
+## Run 3 — Record-sufficiency shortlist
+
+- Tested 50 recent CPSC recalls and 50 recent Federal Register proposed rules.
+- Shortlisted recall screening and federal comment triage with narrower, evidence-supported scopes.
+- Rejected provider-directory auditing, solicitation amendment briefing, and transit disruption guarding.
+- Recorded the shortlist decision and two quantified evidence entries.
+
+
 ## Run 2 — Breadth completion and recall-data falsification
 
 - Added step-free transit disruption and federal comment-opportunity candidates, bringing exploration to five domains.

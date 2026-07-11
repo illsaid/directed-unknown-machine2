@@ -53,8 +53,8 @@ Record candidate problems, not product pitches. Do not remove rejected candidate
 - **Why a small project might compete:** A focused intake tool could turn label details into evidence-linked candidate matches without requiring a retailer integration
 - **Fastest useful experiment:** Extract label-identifying tokens from the 100 profiled notices, create realistic partial-label queries, and measure candidate-recall recall/precision plus review time against manual CPSC search
 - **Strongest falsification argument:** Recall records may lack stable identifiers often enough that automated matching produces too many false positives; large marketplaces may already solve the valuable portion
-- **Evidence references:** EVIDENCE-001, EVIDENCE-002, EVIDENCE-007
-- **Status:** exploring
+- **Evidence references:** EVIDENCE-001, EVIDENCE-002, EVIDENCE-007, EVIDENCE-012
+- **Status:** shortlisted
 
 | Criterion | 1–5 |
 |---|---:|
@@ -86,7 +86,7 @@ Record candidate problems, not product pitches. Do not remove rejected candidate
 - **Fastest useful experiment:** Compare two public directory sources and CMS provider data for one geography; manually adjudicate 100 flagged discrepancies
 - **Strongest falsification argument:** Public-source disagreement does not establish ground truth, enterprise sales are slow, and existing vendors may already cover the workflow
 - **Evidence references:** EVIDENCE-003, EVIDENCE-004
-- **Status:** exploring
+- **Status:** rejected
 
 | Criterion | 1–5 |
 |---|---:|
@@ -118,7 +118,7 @@ Record candidate problems, not product pitches. Do not remove rejected candidate
 - **Fastest useful experiment:** Backtest ten amended solicitations, manually create ground-truth change lists, and compare tool coverage and review time
 - **Strongest falsification argument:** SAM.gov already follows changes, commercial platforms are established, the API requires an account key, and reliably interpreting mixed PDF/Office attachments may be too broad
 - **Evidence references:** EVIDENCE-005, EVIDENCE-006
-- **Status:** exploring
+- **Status:** rejected
 
 | Criterion | 1–5 |
 |---|---:|
@@ -151,7 +151,7 @@ Record candidate problems, not product pitches. Do not remove rejected candidate
 - **Fastest useful experiment:** Model ten station/transfer paths and replay current or historical outages; compare correct route-impact decisions and lookup time with the official status workflow
 - **Strongest falsification argument:** Official status pages and alerts may already solve the job, WMATA's API requires registration, and reliable station-level accessibility topology may be difficult to maintain
 - **Evidence references:** EVIDENCE-008, EVIDENCE-009
-- **Status:** exploring
+- **Status:** rejected
 
 | Criterion | 1–5 |
 |---|---:|
@@ -182,8 +182,8 @@ Record candidate problems, not product pitches. Do not remove rejected candidate
 - **Why a small project might compete:** A narrow, transparent ruleset could provide organization-specific triage without enterprise software or generic alert volume
 - **Fastest useful experiment:** Backtest 50 notices for one technical topic against a manually labeled relevance set and compare review time and deadline capture
 - **Strongest falsification argument:** Free subscriptions and docket alerts may be sufficient; relevance depends on organization context that public data alone cannot supply; commercial products already serve high-value buyers
-- **Evidence references:** EVIDENCE-010, EVIDENCE-011
-- **Status:** exploring
+- **Evidence references:** EVIDENCE-010, EVIDENCE-011, EVIDENCE-013
+- **Status:** shortlisted
 
 | Criterion | 1–5 |
 |---|---:|
