@@ -1,0 +1,44 @@
+{
+  "federal": {
+    "added_by_abstract": 2,
+    "advantage_over_official_full_text_alerts_measured": false,
+    "independent_relevance_labels": false,
+    "profile_terms": [
+      "accessibility",
+      "disability",
+      "disabled",
+      "assistive",
+      "wheelchair",
+      "screen reader"
+    ],
+    "records": 200,
+    "title_keyword_hits": 0,
+    "title_or_abstract_keyword_hits": 2
+  },
+  "limitations": [
+    "The recall labels are proxies extracted from recall image captions, not photographs supplied by resellers.",
+    "Exact identifier search is already available from the official CPSC API, so this test establishes automatable triage, not superiority over manual search.",
+    "The federal profile is synthetic and keyword expansion is not an independent relevance judgment."
+  ],
+  "method": {
+    "federal": "First 200 proposed-rule list records; apply a fixed disability-access profile to title alone and title plus abstract. No independent relevance labels exist.",
+    "recall": "First 100 API records; extract one model-like token from an image caption as a proxy for a physical label; query the official description search with the full token and a token missing its last one or two characters."
+  },
+  "recall": {
+    "caption_model_cases": 14,
+    "exact_official_search": {
+      "target_ambiguous": 1,
+      "target_missed": 0,
+      "target_retrieved": 14,
+      "target_unique": 13
+    },
+    "ground_truth": "recall ID associated with the source image caption",
+    "partial_official_search": {
+      "target_ambiguous": 2,
+      "target_missed": 0,
+      "target_retrieved": 14,
+      "target_unique": 12
+    },
+    "records": 100
+  }
+}

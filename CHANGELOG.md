@@ -1,5 +1,13 @@
 # Changelog
 
+## Run 4 — Reproducible comparison and selection
+
+- Added a reproducible public-API comparison script and recorded results.
+- Retrieved 14/14 caption-derived recall model proxies; 13 were unique with full identifiers and 12 with truncated identifiers.
+- Rejected federal comment triage because no independent relevance labels supported comparison with official alerts.
+- Selected the secondhand recall screener and added its problem contract, exclusions, falsification condition, and validation method.
+
+
 ## Run 3 — Record-sufficiency shortlist
 
 - Tested 50 recent CPSC recalls and 50 recent Federal Register proposed rules.

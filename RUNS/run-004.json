@@ -1,0 +1,41 @@
+{
+  "run": 4,
+  "date": "2026-07-10",
+  "phase": "explore-to-build",
+  "objective": "Run reproducible finalist comparisons and select one direction or reject both.",
+  "actions": [
+    "Added a public-API comparison script for recall identifiers and federal-rule keywords",
+    "Tested full and truncated model proxies against the official CPSC description search",
+    "Tested a fixed public-rule profile and assessed whether independent relevance validation was possible",
+    "Selected the recall screener and recorded its problem contract"
+  ],
+  "filesChanged": [
+    "experiments/run4_compare.py",
+    "experiments/run4_results.json",
+    "OPPORTUNITIES.md",
+    "EVIDENCE.md",
+    "DECISIONS.md",
+    "AGENT_STATE.md",
+    "CHANGELOG.md",
+    "RUNS/run-004.json"
+  ],
+  "evidenceAdded": [
+    "EVIDENCE-014",
+    "EVIDENCE-015"
+  ],
+  "hypothesis": "One finalist can demonstrate an objective, reproducible action advantage using public inputs alone.",
+  "result": "supported for recall retrievability; contradicted for federal relevance advantage",
+  "checks": [
+    "Executed experiments/run4_compare.py successfully against live official APIs",
+    "Verified 14/14 full and partial recall target retrievals and recorded unique versus ambiguous results",
+    "Validated experiments/run4_results.json and RUNS/run-004.json as JSON",
+    "Confirmed one selected candidate and four rejected candidates"
+  ],
+  "limitations": [
+    "The recall labels are proxies extracted from recall image captions, not photographs supplied by resellers.",
+    "Exact identifier search is already available from the official CPSC API, so this test establishes automatable triage, not superiority over manual search.",
+    "The federal profile is synthetic and keyword expansion is not an independent relevance judgment.",
+    "No review-time improvement or real reseller-label accuracy has yet been measured"
+  ],
+  "next": "Implement the minimal conservative recall-intake CLI and tests."
+}

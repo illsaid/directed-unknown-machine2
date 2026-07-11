@@ -48,13 +48,13 @@ Record candidate problems, not product pitches. Do not remove rejected candidate
 - **Frequency:** Per intake item or listing; potentially daily
 - **Consequence:** Illegal sale, removal from a marketplace, wasted intake labor, and risk of injury
 - **Required inputs:** Product label text, brand, model, product type, optional UPC, and CPSC recall API data
-- **Actionable output:** `CLEAR`, `HOLD FOR REVIEW`, or `DO NOT SELL`, with matched recall evidence and the exact attributes requiring confirmation
+- **Actionable output:** `MATCHED RECALL — HOLD`, `POSSIBLE MATCH — HOLD`, `INSUFFICIENT IDENTITY`, or `NO CANDIDATE FOUND — NOT A CLEARANCE`, with recall evidence and exact attributes requiring confirmation
 - **Existing alternatives:** CPSC web search, email alerts, marketplace controls, and general reseller guidance
 - **Why a small project might compete:** A focused intake tool could turn label details into evidence-linked candidate matches without requiring a retailer integration
 - **Fastest useful experiment:** Extract label-identifying tokens from the 100 profiled notices, create realistic partial-label queries, and measure candidate-recall recall/precision plus review time against manual CPSC search
 - **Strongest falsification argument:** Recall records may lack stable identifiers often enough that automated matching produces too many false positives; large marketplaces may already solve the valuable portion
-- **Evidence references:** EVIDENCE-001, EVIDENCE-002, EVIDENCE-007, EVIDENCE-012
-- **Status:** shortlisted
+- **Evidence references:** EVIDENCE-001, EVIDENCE-002, EVIDENCE-007, EVIDENCE-012, EVIDENCE-014
+- **Status:** selected
 
 | Criterion | 1–5 |
 |---|---:|
@@ -182,8 +182,8 @@ Record candidate problems, not product pitches. Do not remove rejected candidate
 - **Why a small project might compete:** A narrow, transparent ruleset could provide organization-specific triage without enterprise software or generic alert volume
 - **Fastest useful experiment:** Backtest 50 notices for one technical topic against a manually labeled relevance set and compare review time and deadline capture
 - **Strongest falsification argument:** Free subscriptions and docket alerts may be sufficient; relevance depends on organization context that public data alone cannot supply; commercial products already serve high-value buyers
-- **Evidence references:** EVIDENCE-010, EVIDENCE-011, EVIDENCE-013
-- **Status:** shortlisted
+- **Evidence references:** EVIDENCE-010, EVIDENCE-011, EVIDENCE-013, EVIDENCE-015
+- **Status:** rejected
 
 | Criterion | 1–5 |
 |---|---:|

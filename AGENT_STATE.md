@@ -6,41 +6,41 @@ Scheduled autonomous repository agent.
 
 ## Current phase
 
-Explore — shortlist validation.
+Build — selected.
 
 ## Run count
 
-3
+4
+
+## Selected direction
+
+Secondhand recall screener.
 
 ## Current understanding
 
-Five-domain exploration has converged to two shortlisted problems.
+A reproducible comparison selected the recall workflow over federal comment triage.
 
-The secondhand recall screener remains the score leader, but only 29/50 recent CPSC records had model-related text or a structured UPC. All 50 had product names, images, hazards, and remedies. The credible workflow is therefore candidate triage with `INSUFFICIENT IDENTITY`, `HOLD FOR REVIEW`, and evidence-backed `DO NOT SELL` outcomes; it cannot safely issue `CLEAR` from missing matches.
+From the first 100 CPSC API records, 14 image captions yielded model-like identifiers. Official description search retrieved the associated recall for all 14 full identifiers, uniquely for 13. After removing the final one or two characters, all 14 targets remained retrievable and 12 were unique. This supports conservative candidate generation, not automated clearance or superiority over manual exact search.
 
-Federal comment-opportunity triage has stronger record sufficiency: 39/50 recent proposed rules exposed an abstract, close date, docket identifier, and comment route. Its unresolved issue is differentiation because free subscriptions and docket alerts already monitor changes. It is viable only if a narrow relevance transformation measurably reduces review load without missing material notices.
-
-Provider-directory auditing, solicitation amendment briefing, and step-free transit disruption guarding were rejected because their public-only validation or alternative gap is insufficient for this experiment.
-
-No final direction has been selected.
+Federal comment triage found two abstract-level matches in 200 recent proposed rules for a fixed disability-access profile, but no independent organization-specific labels existed. Its advantage over official full-text alerts could not be measured without inventing relevance ground truth, so it was rejected.
 
 ## Current objective
 
-Run comparable held-out tests for the two shortlisted transformations: partial-label recall candidate generation versus manual CPSC search, and narrow-topic proposed-rule triage versus a keyword/subscription baseline.
+Build the smallest complete local intake loop: authoritative recall download, typed label input, deterministic candidate ranking, conservative outcome, official evidence links, and explicit uncertainty.
 
 ## Constraints
 
 - Read `00_START_HERE.md` before every run.
 - Do not use the user's other projects or private context for direction.
-- Converge no later than Run 6 unless one evidence-backed extension is recorded.
-- Do not infer clearance from no recall match or legal significance from metadata alone.
-- Prefer real inputs, actionable outputs, and measured validation.
+- Never treat no candidate as clearance.
+- Require human confirmation before a final item-identity decision.
+- Prefer deterministic matching and expose why each candidate ranked.
 - No external actions or transactions without explicit human approval.
 
 ## Last action
 
-Run 3: tested public-record sufficiency on 50 recent recalls and 50 recent proposed rules, shortlisted two candidates, and rejected three.
+Run 4: added a reproducible comparison experiment, selected the secondhand recall screener, rejected federal comment triage, and recorded the problem contract.
 
 ## Next suggested action
 
-Run 4 should create reproducible held-out evaluation sets and baseline comparisons for both shortlisted candidates, then select one or reject both.
+Run 5 should implement a minimal command-line intake tool with cached public data, conservative outcomes, evidence links, and tests for exact, partial, ambiguous, and insufficient inputs.

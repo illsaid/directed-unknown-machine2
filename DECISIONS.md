@@ -25,3 +25,41 @@ Rejected:
 - **Step-free transit disruption guard** — The official status page and ELstat already address outages, while the API requires registration and path-level topology remains unverified.
 
 No final direction has been selected. Run 4 must compare the two shortlisted transformations against their incumbent workflows before convergence.
+
+
+## Run 4 — Select the secondhand recall screener
+
+**Selected:** Secondhand recall screener.
+
+**Rejected finalist:** Federal comment-opportunity triage. It could surface abstract-level candidates, but this experiment has no independent organization-specific relevance labels and therefore cannot demonstrate improvement over free full-text alerts without inventing ground truth.
+
+### Problem contract
+
+> For an intake worker or listing operator at a small secondhand seller, when a product is being considered for inventory, the project takes available label text, brand, model, product type, and optional UPC and produces a conservative, evidence-linked recall candidate decision, designed to reduce repeated search work and missed candidate recalls compared with manually constructing CPSC searches for each item.
+
+### Falsification condition
+
+Stop or pivot if held-out partial-label cases fail to retrieve the correct candidate often enough for safe triage, if ambiguous queues are routinely unmanageable, or if the workflow does not reduce measured review time relative to manual CPSC search.
+
+### Exclusions
+
+- No legal or safety clearance.
+- No claim that no search result means no recall.
+- No automatic sale approval.
+- No final product-identity determination without human confirmation.
+- No outreach, marketplace action, or transaction.
+
+### Smallest complete version
+
+A local tool that downloads authoritative recall records, accepts typed label fields, ranks candidates, and returns one of:
+
+- `MATCHED RECALL — HOLD`
+- `POSSIBLE MATCH — HOLD`
+- `INSUFFICIENT IDENTITY`
+- `NO CANDIDATE FOUND — NOT A CLEARANCE`
+
+Every candidate output must link to the official notice and show the fields that matched or remain unconfirmed.
+
+### Validation method
+
+Use held-out real recall records to create partial-label cases without exposing the target notice to the matcher. Compare correct-candidate retrieval, ambiguity, failure behavior, and review time with manual CPSC search. Distinguish technical validation from user validation.

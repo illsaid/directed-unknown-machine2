@@ -189,3 +189,30 @@ Record public evidence that materially affects candidate selection, implementati
 - **Confidence:** high
 - **Limitations:** The newest 50 proposed rules are a short convenience window. Corrections and unusual comment procedures require careful treatment, and FederalRegister.gov remains an unofficial informational rendition.
 - **Resulting decision or next test:** Shortlist for a narrow relevance backtest against a keyword/subscription baseline, preserving official-document links and explicit missing-field warnings.
+
+
+### EVIDENCE-014 — Official search retrieves caption-derived model proxies
+
+- **Candidate or component:** Secondhand recall screener
+- **Claim tested:** A model-like identifier visible on a product can retrieve the associated recall through the authoritative search path, including when partially transcribed.
+- **Source:** https://www.saferproducts.gov/RestWebServices/Recall?format=json
+- **Source type:** primary
+- **Retrieved:** 2026-07-10
+- **Relevant evidence:** A reproducible script inspected the first 100 records, extracted one model-like token from image captions in 14 records, and queried the official `RecallDescription` endpoint. Full tokens retrieved all 14 targets, 13 uniquely; tokens missing their final one or two characters retrieved all 14, 12 uniquely.
+- **Supports or contradicts:** Supports automated conservative candidate triage and partial-label tolerance.
+- **Confidence:** medium
+- **Limitations:** Caption tokens are proxies for physical labels and come from the target notices. The test measures retrievability, not performance on independent reseller photographs or superiority to manual exact search.
+- **Resulting decision or next test:** Select the recall workflow; build a local intake tool and validate on held-out, independently constructed partial-label cases with a manual-search time baseline.
+
+### EVIDENCE-015 — Federal triage lacks independent validation context
+
+- **Candidate or component:** Federal comment-opportunity triage
+- **Claim tested:** A public-only relevance transformation can demonstrate value beyond official keyword alerts.
+- **Source:** https://www.federalregister.gov/api/v1/documents.json?per_page=200&order=newest&conditions%5Btype%5D%5B%5D=PRORULE
+- **Source type:** primary
+- **Retrieved:** 2026-07-10
+- **Relevant evidence:** A fixed disability-access profile matched zero of 200 recent proposed-rule titles and two title-plus-abstract records. The expansion found candidates, but there were no independent organization-specific relevance labels, so precision, recall, or advantage over official full-text subscriptions could not be measured.
+- **Supports or contradicts:** Contradicts selecting the candidate under the experiment's public-only validation constraints.
+- **Confidence:** medium
+- **Limitations:** A real organization profile and labeled history could make the workflow valuable; their absence is a constraint of this experiment, not proof of no market.
+- **Resulting decision or next test:** Reject for this experiment rather than inventing relevance ground truth.
