@@ -116,15 +116,15 @@ def screen(records: list[dict], *, brand: str = "", model: str = "", upc: str = 
     candidates = candidates[:5]
 
     if not candidates:
-        outcome = "NO CANDIDATE FOUND â€” NOT A CLEARANCE"
+        outcome = "NO CANDIDATE FOUND \u2014 NOT A CLEARANCE"
         next_step = "Try alternate label text and manually review CPSC records before listing."
     elif candidates[0]["exact_identity"] and (
         len(candidates) == 1 or candidates[0]["score"] > candidates[1]["score"]
     ):
-        outcome = "MATCHED RECALL â€” HOLD"
+        outcome = "MATCHED RECALL \u2014 HOLD"
         next_step = "Hold the item and confirm every identifying detail against the official recall notice."
     else:
-        outcome = "POSSIBLE MATCH â€” HOLD"
+        outcome = "POSSIBLE MATCH \u2014 HOLD"
         next_step = "Hold the item and resolve ambiguous or partial matches against official notices."
 
     for candidate in candidates:
